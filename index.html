@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Open+Sans+Condensed:300|Roboto+Condensed" rel="stylesheet">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Joseph Harskamp</title>
 
@@ -18,40 +20,130 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
+  <style>
+    @media (max-width: 1000px) {
+      .container-fluid {
+          width: 100%;
+          
+          margin: 0;
+
+      }
+      .row{
+        margin: 3%;
+        border: none;
+      }
+
+      .text{
+        font-size: 4vw;
+      }
+     
+      .paragraph{   
+        background-image: none;
+        border: none;
+
+      }
+      
+      .opening{
+        margin-top: 0;
+        padding-bottom: 30%;
+      }
+
+      .opening h1{
+        font-size: 4vw;
+      }
+
+      nav li{
+        font-size: 2vw;
+        padding:0;
+      }
+
+      .work{
+        border: 1px solid black;
+        background-color: lightgray;
+        padding-top: 10px;
+        overflow: hidden;
+      }
+
+      .education{
+        border: 1px solid black;
+        padding-top: 10px;
+        width: 100%;
+        margin: 0;
+        margin-top: 1%;
+      }
+
+
+
+   }
+  </style>
+
   <body>
+
+  <!--<header>
+    <nav class="navbar navbar-default">
+      <a href="mailto:jeh26033@email.vccs.edu">jeh26033@email.vccs.edu</a>
+      <a href="https://github.com/jeh26033">Joseph Harskamp</a>
+     
+    </nav>
+  </header>-->
+<header>
+<div id="top"></div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#top">Joseph Harskamp</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="mailto:jeh26033@email.vccs.edu">Email Me</a></li>
+        <li><a href="https://github.com/jeh26033">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/joseph-harskamp/">LinkedIn</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class= "opening">
+    <h1>Lets build something incredible</h1>
+  </div> <!-- close the opening div-->
+</header>
+
   <div class="container-fluid">
 
-    <div class="row intro">
-      <div class="text-center opening">
-        <header> 
-          <img class="col-md-12 img-responsive" src="assets/glasses.jpg">
-        </header>
-      </div> <!-- end of opening div-->
-    </div><!-- end of intro div-->
+    <div class="row">
 
-    <div class="row aboutme">
-      <div class="col-md-4"><img class="thumbnail img-responsive" src="assets/mecropped.png"></div>
-      <div class="col-md-8 paragraph jumbotron">
-        <h2>About Me</h2>
-        <p>My name is Joseph Harskamp, though my friends just call me Joe. I grew up on a farm in Northwest Iowa, but currently live in Northern Virginia with my wife and dog.</p> 
-        <p>I learned a lot living on a farm, like the value of a solid work ethic, honesty, and respect. Those values stayed with me, and are part and parcel of who I am. I enjoy tinkering with things, whether it's an old car, a website, or some old gadget I've found, my curiosity is what fuels my passion. I love to take things apart, examine their inner workings, and reassemble them to a state better than before.</p>
-        <p>I love learning and growing in every aspect of my life. I enjoy hiking, video games, craft beer, board games, and of course, programming. I'm a bit quirky, with an artistic streak, but little skill in physical mediums like paints or pencils, so I use pixels to express myself. I like to think that I look at things from different angles than most people. I also have great people skills, and like to be around others, though I'm just as fine all by myself. </p>
-        <p>If you want a resume, there's a link on this page, or you can contact me for any information you may need.</p>
+      <div class="col-md-12 text paragraph">
+
+        <div id="me" class="col-md-4"> 
+          <h2>A Bit About Me</h2>
+        
+          <p>My name is Joseph Harskamp, though my friends just call me Joe. I grew up on a farm in Northwest Iowa, but currently live in Northern Virginia with my wife and dog.</p> 
+
+          <p>I learned a growing up on a farm, such as the value of a solid work ethic, honesty, and respect. Those values stayed with me, and are part and parcel of who I am. I enjoy tinkering with things, whether it's an old car, a website, or some old gadget I've found, my curiosity is what fuels my passion. I love to take things apart, examine their inner workings, and reassemble them to a state better than before. Usually.</p>
+
+          <p>I love learning and growing in every aspect of my life. I enjoy hiking, video games, craft beer, board games, and of course, programming. I'm a bit quirky, with an artistic streak, but little skill in physical mediums like paints or pencils, so I use pixels to express myself. I like to think that I look at things from different angles than most people. I also have great people skills, and like to be around others, though I'm just as fine all by myself. </p>
+
+          <p>If you want a resume, there's a link on this page, or you can contact me for any information you may need.</p>
+
+          <h3>Lets build something</h3>
+        </div>
       </div> <!-- end of paragraph div-->
     </div><!-- end of aboutme div-->
 
 
-    <div class="row work">
+    <div class="row text work">
 
     <h2>Experience</h2>
      
 
       <div class="col-md-3 education">
+
         <h3>Examples of Work and Resume</h3>
         <ul>
           <li><a href="https://pug-page.herokuapp.com/index.html">Web Design 1 Final Project</a></li>
           <li><a href="assets/Resume_jharskamp_Feb2017.pdf" target="_blank">Resume</a></li>
           <li>Comptia A+ Certified</li>
+          <li>More on the way!</li>
         </ul>
       </div> <!-- end of work div -->
 

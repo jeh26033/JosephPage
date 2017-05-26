@@ -3,26 +3,46 @@
 /* Headers/Footers */
 
 header{
+	background-color: black;
 
+}
+
+nav{
+	position: fixed;
+	padding: 0;
+	margin-bottom: 0;
+	background-color: black;
+}
+
+nav li{
+
+	padding: 10px;
+	display: inline;
 }
 
 h1, h2,h3{
-	padding: 20px;
+	font-family: 'Open Sans';
+	color: black;
 	text-align: center;
 }
-
+h4{
+	color:white;
+}
 footer{
 	padding: 20px;
 }
 
 .col-md-12,.col-md-8,.col-md-6,.col-md-4{
 	border: 1px solid black;
-	padding: 6px;
+	
 }
 
 /* body */
 
+
 body{
+	padding: 0;
+	margin-top: 0px;
 	background-image:url('assets/wavytexture.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -30,54 +50,107 @@ body{
 }
 
 .container-fluid{
-	padding: 10px;
-	border: 5px solid black;
-	margin: 1%;
+	margin-top: 0;
+	border: 10px solid black;
+
 }
 
 .row{
 	margin: 5%;
+	border-top: 10px solid black;
 
 }
 
+.text{
+	font-family: 'Roboto Condensed';
+	font-size: 1vw;
+	color:black;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	color: purple;
+	text-decoration: none;
+}
 
 
 /* first div */
 
 
 .opening{
-	border: 1px solid black;
-	padding: 0;	
+	background-image:url('assets/nightsky.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border: 10px solid black;
+	width: 100%;
+	padding-top:28%;
+	padding-bottom: 28%;
+	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
 	
-
-
 }
 
-.intro{
-
-	margin:0px;
+.opening h1{
+	padding: none;
+	color: white;
+	font-size: 4em;
+	font-weight: bolder;
 }
+
 
 /*second div */
+
+.paragraph{
+
+	background-image: url(assets/cactus.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-left: 10px solid black;
+	padding-top: 15%;
+	padding-bottom: 15%
+
+}
+
+.paragraph h2{
+	font-size: 3vw;
+}
+
+#me{
+	padding: 29px;
+	background-color: lightgrey;
+	opacity: .75;
+	float: right;
+
+}
+
+/* third div */
+
+
+
 
 .work{
 
 	margin-right: 15%;
 	margin-left: 15%;
-	padding: 10px;
+	padding: 20px;
 }
 
 .education{
+	padding: 10px;
 	background-color: grey;
 	margin: 4.1%;
 	min-height: 500px;
+
 }
 
 
 
-/*third div */
+/*last div */
 
 .contact{
 

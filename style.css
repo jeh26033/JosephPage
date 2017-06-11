@@ -4,11 +4,10 @@
 
 header{
 	background-color: black;
-
 }
 
 nav{
-	position: fixed;
+
 	padding: 0;
 	margin-bottom: 0;
 	background-color: black;
@@ -16,15 +15,17 @@ nav{
 
 nav li{
 
-	padding: 10px;
+	
 	display: inline;
 }
 
 h1, h2,h3{
+	padding: 10px;
 	font-family: 'Open Sans';
 	color: black;
 	text-align: center;
 }
+
 h4{
 	color:white;
 }
@@ -34,38 +35,39 @@ footer{
 
 .col-md-12,.col-md-8,.col-md-6,.col-md-4{
 	border: 1px solid black;
-	
 }
+
 
 /* body */
 
 
 body{
 	padding: 0;
-	margin-top: 0px;
-	background-image:url('assets/wavytexture.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-
+	margin-top: 0px;	
 }
 
 .container-fluid{
 	margin-top: 0;
 	border: 10px solid black;
+}
 
+.wrapper{
+	margin: 0;
+	padding: 0;
+	background-image:url('https://source.unsplash.com/random');
+	background-attachment: fixed;
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 
 .row{
 	margin: 5%;
-	border-top: 10px solid black;
-
 }
 
 .text{
 	font-family: 'Roboto Condensed';
 	font-size: 1vw;
 	color:black;
-
 }
 
 a{
@@ -82,17 +84,15 @@ a:hover{
 
 
 .opening{
-	background-image:url('assets/nightsky.jpg');
+	background-image:url('https://source.unsplash.com/random');
 	background-repeat: no-repeat;
-	background-size: 100%;
-	border: 10px solid black;
+	background-size: cover;
 	width: 100%;
-	padding-top:28%;
-	padding-bottom: 28%;
+	padding-top:20.2%;
+	padding-bottom: 23.5%;
 	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
-	
 }
 
 .opening h1{
@@ -100,20 +100,32 @@ a:hover{
 	color: white;
 	font-size: 4em;
 	font-weight: bolder;
+	text-shadow: 2px 2px black;
+}
+
+.opening h2{
+	display: none;
+}
+
+.opening small{
+	float: right;
+	font-size: 1vw;
+	color: white;
+	text-shadow: 2px 2px black;
+	padding-top: 18%;
+	padding-right: 5%;
 }
 
 
 /*second div */
 
 .paragraph{
-
+	opacity: .90;
 	background-image: url(assets/cactus.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	border-left: 10px solid black;
-	padding-top: 15%;
-	padding-bottom: 15%
-
+	padding-top: 3%;
+	padding-bottom: 8%;
 }
 
 .paragraph h2{
@@ -125,44 +137,183 @@ a:hover{
 	background-color: lightgrey;
 	opacity: .75;
 	float: right;
-
 }
 
 /* third div */
 
 
-
-
 .work{
-
 	margin-right: 15%;
 	margin-left: 15%;
 	padding: 20px;
 }
 
-.education{
-	padding: 10px;
-	background-color: grey;
-	margin: 4.1%;
-	min-height: 500px;
-
+.work h2{
+	background-color: lightgrey;
+	opacity: .75;
+	font-size: 3vw;
+	font-weight: bolder;
 }
 
+.education{
+	text-align: center;
+	padding: 10px;
+	background-color: lightgrey;
+	opacity: .75;
+	margin: 1%;
+	min-height: 350px;
+}
+
+.education ul{
+	list-style: none;
+	padding: 10px;
+}
 
 
 /*last div */
 
-.contact{
-
+.contact h2{
+	background-color: lightgrey;
+	opacity: .75;
+	font-size: 2vw;
+	font-weight: bolder;
 }
 
-.contactlist ul{
-	list-style: none;
-	padding: 10px;
+.contactlist{
+	padding-left: 25%;
+	padding-right: 25%;
+	background-color: lightgrey;
+	opacity: .75;
+	font-size: 1vw;
+	font-weight: bolder;
+	list-style: none;	
 }
+
 
 .contactlist ul li{
 	padding: 10px;
 	display: inline-block;
 }
+
+footer{
+	background-color: lightgrey;
+	opacity: .75;
+	font-size: 2vw;
+	font-weight: bolder;
+}
+
+/* bouncy arrow source https://codepen.io/robooneus/pen/Aclqr */
+
+.button{
+	margin-top: 10%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height:100%;
+}
+
+
+body {
+  margin:0;
+  background:#14b5d1;
+  font-size:1.3em;
+  color:#333;
+  font-family:'Open Sans', sans-serif;
+}
+
+section {
+  float:left;
+  width:100%;
+  background:#fff;
+  position:relative;
+  box-shadow:0 0 5px 0px #333;
+}
+
+
+/* the important styles */
+
+.arrow-wrap {
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:-5em;
+  margin-left:-5em;
+  background:#111;
+  width:10em;
+  height:10em;
+  padding:4em 2em;
+  border-radius:50%;
+  font-size:0.5em;
+  display:block;
+  box-shadow:0px 0px 5px 0px #333;
+}
+
+.arrow {
+
+  float:left;
+  position:relative;
+  width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 3em 3em 0 3em;
+border-color: #ffffff transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
+}
+
+.arrow:after {
+  content:'';
+  position:absolute;
+  top:-3.2em;
+  left:-3em;
+  width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 3em 3em 0 3em;
+border-color: #111 transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
+}
+
+
+.hint {
+  position:absolute;
+  top:0.6em;
+  width:100%;
+  left:0;
+  font-size:2em;
+  font-style:italic;
+  text-align:center;
+  color:#fff;
+  opacity:0;
+}
+
+
+.arrow-wrap:hover .hint {
+  opacity:1;
+}
+
+
+  @-webkit-keyframes arrows {
+    0% { top:0; }
+    10% { top:12%; }
+    20% { top:0; }
+    30% { top:12%; }
+    40% { top:-12%; }
+    50% { top:12%; }
+    60% { top:0; }
+    70% { top:12%; }
+    80% { top:-12%; }
+    90% { top:12%; }
+    100% { top:0; }
+  }
+  
+  .arrow-wrap .arrow {
+    -webkit-animation: arrows 2.8s 0.4s;
+    -webkit-animation-delay: 3s;
+  }
 

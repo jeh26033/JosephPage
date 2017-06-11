@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <meta 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +14,10 @@
     <!-- Bootstrap -->
     <link href="assets/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,7 +26,49 @@
     <![endif]-->
   </head>
 
+<!-- button script. source:https://codepen.io/robooneus/pen/Aclqr-->
+<script type="text/Javascript">
+
+ $(window).scroll( function(){
+
+  //get scroll position
+  var topWindow = $(window).scrollTop();
+  //multipl by 1.5 so the arrow will become transparent half-way up the page
+  var topWindow = topWindow * 1.5;
+  
+  //get height of window
+  var windowHeight = $(window).height();
+      
+  //set position as percentage of how far the user has scrolled 
+  var position = topWindow / windowHeight;
+  //invert the percentage
+  position = 1 - position;
+
+  //define arrow opacity as based on how far up the page the user has scrolled
+  //no scrolling = 1, half-way up the page = 0
+  $('.arrow-wrap').css('opacity', position);
+
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+});
+
+
+</script>
+
   <style>
+
     @media (max-width: 1000px) {
       .container-fluid {
           width: 100%;
@@ -33,7 +80,9 @@
         margin: 3%;
         border: none;
       }
-
+      .wrapper{
+        background-size: cover;
+      }
       .text{
         font-size: 4vw;
       }
@@ -46,50 +95,52 @@
       
       .opening{
         margin-top: 0;
-        padding-bottom: 30%;
+        padding-bottom: 60%;
+        padding-top: 60%;
       }
 
       .opening h1{
         font-size: 4vw;
       }
 
+      .opening h2{
+        display: inline;
+        padding: none;
+        color: white;
+        font-size: 4em;
+        font-weight: bolder;
+        text-shadow: 2px 2px black;
+      }
+
       nav li{
         font-size: 2vw;
         padding:0;
       }
-
-      .work{
-        border: 1px solid black;
-        background-color: lightgray;
-        padding-top: 10px;
-        overflow: hidden;
+      nav{
+        display: none;
+      }
+      
+      .contactlist{
+        padding: 1%;
+        font-size: 2vw;
       }
 
-      .education{
-        border: 1px solid black;
-        padding-top: 10px;
-        width: 100%;
-        margin: 0;
-        margin-top: 1%;
+      .contactlist ul{
+        padding: 0;
       }
+      
 
 
 
    }
   </style>
 
-  <body>
+<body>
 
-  <!--<header>
-    <nav class="navbar navbar-default">
-      <a href="mailto:jeh26033@email.vccs.edu">jeh26033@email.vccs.edu</a>
-      <a href="https://github.com/jeh26033">Joseph Harskamp</a>
-     
-    </nav>
-  </header>-->
+
 <header>
 <div id="top"></div>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#top">Joseph Harskamp</a>
@@ -104,87 +155,108 @@
 
 
   <div class= "opening">
-    <h1>Lets build something incredible</h1>
+    <a href="https://www.linkedin.com/in/joseph-harskamp/" data-toggle="tooltip" title="Linkedin">
+    <h2>Joseph Harskamp</h2></a>
+    <h1>Let's build something incredible</h1>
+    <a href="http://josephharskamp.com"><small>Refresh your perspective</small>
+
+    <div class="button">
+      <section class="main">
+
+      <a class="arrow-wrap" href="#scrollpoint">
+      <span class="arrow"></span>
+      <span class="hint">scroll</span>
+      </a>
+      </section>
+    </div>
   </div> <!-- close the opening div-->
+
+<!-- scroll button-->
+
 </header>
 
-  <div class="container-fluid">
 
-    <div class="row">
+  <div class="wrapper container-fluid">
 
-      <div class="col-md-12 text paragraph">
+      <div  id="scrollpoint" class="row">
 
-        <div id="me" class="col-md-4"> 
-          <h2>A Bit About Me</h2>
-        
-          <p>My name is Joseph Harskamp, though my friends just call me Joe. I grew up on a farm in Northwest Iowa, but currently live in Northern Virginia with my wife and dog.</p> 
+        <div class="col-md-12 text paragraph">
 
-          <p>I learned a growing up on a farm, such as the value of a solid work ethic, honesty, and respect. Those values stayed with me, and are part and parcel of who I am. I enjoy tinkering with things, whether it's an old car, a website, or some old gadget I've found, my curiosity is what fuels my passion. I love to take things apart, examine their inner workings, and reassemble them to a state better than before. Usually.</p>
+          <div id="me" class="col-md-4"> 
+            <h2>A Bit About Me</h2>
+          
+            <p>My name is Joseph Harskamp, though my friends just call me Joe. I grew up on a farm in Northwest Iowa, but currently live in Northern Virginia with my wife and dog.</p> 
 
-          <p>I love learning and growing in every aspect of my life. I enjoy hiking, video games, craft beer, board games, and of course, programming. I'm a bit quirky, with an artistic streak, but little skill in physical mediums like paints or pencils, so I use pixels to express myself. I like to think that I look at things from different angles than most people. I also have great people skills, and like to be around others, though I'm just as fine all by myself. </p>
+            <p>I learned a lot growing up on a farm, such as the value of a solid work ethic, honesty, and respect. Those values stayed with me, and are part and parcel of who I am. I enjoy tinkering with things, whether it's an old car, a website, or some old gadget I've found, my curiosity is what fuels my passion. I love to take things apart, examine their inner workings, and reassemble them to a state better than before. Usually.</p>
 
-          <p>If you want a resume, there's a link on this page, or you can contact me for any information you may need.</p>
+            <p>I love learning and growing in every aspect of my life. I enjoy hiking, video games, craft beer, board games, and of course, programming. I'm a bit quirky, with an artistic streak, but little skill in physical mediums like paints or pencils, so I use pixels to express myself. I like to think that I look at things from different angles than most people. I also have great people skills, and like to be around others, though I'm just as fine all by myself. </p>
 
-          <h3>Lets build something</h3>
-        </div>
-      </div> <!-- end of paragraph div-->
-    </div><!-- end of aboutme div-->
+            <p>If you'd like to learn more, feel free to get in touch. Resumes and contact info are a bit futher down, click here to go to them. <a href="#resume">Resume</a>, <a href="#contact">Contact me.</a>
 
+            <h3>Lets build something</h3>
+
+          </div>
+        </div> <!-- end of paragraph div-->
+      </div><!-- end of aboutme div-->
+
+
+ 
 
     <div class="row text work">
 
-    <h2>Experience</h2>
-     
+      <h2>Experience</h2>
+       
 
-      <div class="col-md-3 education">
+        <div class="col-md-12 education">
 
-        <h3>Examples of Work and Resume</h3>
-        <ul>
-          <li><a href="https://pug-page.herokuapp.com/index.html">Web Design 1 Final Project</a></li>
-          <li><a href="assets/Resume_jharskamp_Feb2017.pdf" target="_blank">Resume</a></li>
-          <li>Comptia A+ Certified</li>
-          <li>More on the way!</li>
-        </ul>
-      </div> <!-- end of work div -->
+          <h1 id="resume">Examples of Work and Resume</h1>
 
-      <div class="col-md-3 education">
-        <h3>Formal Education</h3>
-        <ul>
-          <li>Northern Virginia Community College</li>
-            <ul>
-              <li>Web Design 1</li>
-              <li>Introduction to Computer Applications</li>
-              <li>Introduction to Internet Services</li>
-              <li>Software Design</li>
-            </ul>
-          <li>Cumulative GPA of 3.7</li>
-        </ul>
-      </div> <!-- end of education div-->
+          <ul>
+            <li><a href="https://pug-page.herokuapp.com/index.html">Web Design 1 Final Project</a></li>
+            <li><a href="assets/Resume_jharskamp_Feb2017.pdf" target="_blank">Resume</a></li>
+            <li>Comptia A+ Certified</li>
+            <li>More on the way!</li>
+          </ul>
 
-      <div class="col-md-3 education">
-        <h3>Self-taught Courses</h3>
-        <ul>
-          <li>Codecademy</li>
-            <ul>
-              <li>Javascript/JQuery</li>
-              <li>Python</li>
-              <li>HTML/CSS</li>
-              <li>Ruby</li>
-            </ul>
-          <li>Odin Project modules</li>
-            <ul>
-              <li>Web Development 101</li>
-              <li>Ruby</li>
-              <li>Ruby on Rails</li>
-              <li>HTML5/CSS3</li>
-            </ul>
-        </ul>
-        
-      </div> <!-- end of selfteaching div-->
+        </div> <!-- end of work div -->
 
-    </div><!-- end of work div-->
+        <div class="col-md-12 education">
+          <h1>Formal Education</h1>
+          <ul>
+            <li>Northern Virginia Community College</li>
+              <ul>
+                <li>Web Design 1</li>
+                <li>Introduction to Computer Applications</li>
+                <li>Introduction to Internet Services</li>
+                <li>Software Design</li>
+              </ul>
+            <li>Cumulative GPA of 3.7</li>
+          </ul>
+        </div> <!-- end of education div-->
 
-    <div class="row contact">
+        <div class="col-md-12 education">
+          <h1>Self-taught Courses</h1>
+          <ul>
+            <li>Codecademy</li>
+              <ul>
+                <li>Javascript/JQuery</li>
+                <li>Python</li>
+                <li>HTML/CSS</li>
+                <li>Ruby</li>
+              </ul>
+            <li>Odin Project modules</li>
+              <ul>
+                <li>Web Development 101</li>
+                <li>Ruby</li>
+                <li>Ruby on Rails</li>
+                <li>HTML5/CSS3</li>
+              </ul>
+          </ul>  
+        </div> <!-- end of selfteaching div-->
+      </div><!-- end of work div-->
+ 
+
+    <div id="contact" class="row contact">
       <h2>Contact Me</h2>
       <div class="col-md-12 contactlist">
         <ul>
@@ -197,10 +269,7 @@
 
     <footer class="text-center">Joseph Harskamp 2017</footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
   </div> <!-- end of container div-->
   </body>
 </html>
